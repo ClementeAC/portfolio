@@ -35,28 +35,36 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Graduated University",
+    location: "Zulia, Venezuela",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "I graduated as a Computer Enginner after 4 years of University. I immediately found a job as a front-end developer through my internship.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
-  },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2020",
   },
   {
     title: "Full-Stack Developer",
-    location: "Houston, TX",
+    location: "Zulia, Venezuela",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "I worked as a full-stack for 2 years. Developed Web Applications with React, Node.js and Microsoft SQL Server deployed to Azure alongside Azure functions, created Python Automations and Developed Mobile Apps with React Native.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2020 - 2023",
+  },
+  {
+    title: "Full-Stack Developer",
+    location: "Chile (Remote)",
+    description:
+      "I worked as a full-stack and web crawling developer for a year. Developed Webpages with Angular, Typescript, TailwindCSS, Node.js and MySQL deployed to AWS, also automated web scrapping with Puppeteer.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2023 - 2024",
+  },
+  {
+    title: "Full-Stack Developer",
+    location: "Zulia, Venezuela",
+    description:
+      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind and MongoDB as well as Flutter, React Native or Swift for Mobile Applications. I'm open to full-time opportunities.",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "2024 - Present",
   },
 ] as const;
 
