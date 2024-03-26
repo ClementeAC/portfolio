@@ -9,9 +9,11 @@ import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home");
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <section
@@ -76,15 +78,19 @@ export default function Intro() {
         transition={{ delay: 1.5 }}
       >
         <Link
+          onClick={() => {
+            setActiveSection("Contact");
+            setTimeOfLastClick(Date.now());
+          }}
           href="#contact"
-          className=" group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition-all cursor-pointer"
+          className=" group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition-all cursor-pointer dark:text-gray-700 dark:hover:bg-gray-100 dark:bg-gray-200"
         >
           Contact me here{" "}
           <BsArrowRight className="opacity-70 group-hover:translate-x-2 transition" />
         </Link>
 
         <a
-          className="border border-black/10 bg-white text-gray-900 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-200 active:scale-105 transition-all cursor-pointer"
+          className="borderBlack bg-white text-gray-900 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-200 active:scale-105 transition-all cursor-pointer dark:bg-white/10 dark:text-white/60"
           href="/CV.pdf"
           download
         >
@@ -92,14 +98,14 @@ export default function Intro() {
         </a>
 
         <a
-          className="bg-white border border-black/10 text-gray-700 p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:bg-gray-200 active:scale-105 transition-all cursor-pointer"
+          className="bg-white borderBlack text-gray-700 p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:bg-gray-200 active:scale-105 transition-all cursor-pointer dark:bg-white/10 dark:text-white/60"
           href="https://www.linkedin.com/in/ccastejon/"
         >
           <BsLinkedin />
         </a>
 
         <a
-          className="bg-white border border-black/10 text-gray-700 p-4 flex items-center gap-2 rounded-full text-[1.20rem] outline-none focus:scale-[1.15] hover:scale-[1.15] hover:bg-gray-200 active:scale-105 transition-all cursor-pointer"
+          className="bg-white borderBlack text-gray-700 p-4 flex items-center gap-2 rounded-full text-[1.20rem] outline-none focus:scale-[1.15] hover:scale-[1.15] hover:bg-gray-200 active:scale-105 transition-all cursor-pointer dark:bg-white/10 dark:text-white/60"
           href="https://github.com/ClementeAC"
         >
           <FaGithubSquare />
