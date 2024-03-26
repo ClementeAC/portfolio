@@ -7,7 +7,7 @@ export default function Footer() {
         &copy; 2024 Clemente Castejon. All rights reserved.
       </small>
       <p className="text-xs ">
-        <span className="font-semibold">About this website: </span> build with
+        <span className="font-semibold">About this website: </span> built with
         React & Next.js (App Router & Server Actions), Typescript, Tailwind CSS,
         Framer Motion, React Email & Resend, Vercel Hosting.
       </p>
